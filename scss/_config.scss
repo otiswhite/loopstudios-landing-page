@@ -1,0 +1,36 @@
+/* config start */
+
+// colors
+$color-primary-100: hsl(0, 0%, 100%); // white
+$color-primary-400: hsl(0, 0%, 55%); // dark gray
+$color-primary-500: hsl(0, 0%, 41%); // very dark gray
+$color-primary-900: hsl(0, 0%, 0%); //black
+$color-primary-900-transparent: rgba(0, 0, 0, 0.2); //black transparent
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap');
+$font-primary: 'Alata', sans-serif;
+$font-accent: 'Josefin Sans', sans-serif;
+
+// reset
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, ol, li, a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+a, li, button {
+  cursor: pointer;
+}
+
+body {
+  font-family: $font-primary;
+}
+
+/* config end */

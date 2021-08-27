@@ -1,0 +1,372 @@
+/* lead start */
+
+.lead {
+  margin: 3rem 2rem;
+
+  @media(min-width: 768px){
+    width: 100%;
+    max-width: 1100px;
+    padding: 1.5rem;
+    margin: 5rem auto 0rem;
+  }
+
+  &__image {
+
+    @media(min-width: 768px){
+      width: 80%;
+    }
+    
+    @media(min-width: 968px){
+      width: 60%;
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    margin-top: 2rem;
+    text-align: center;
+    background: $color-primary-100;
+
+    @media(min-width: 768px){
+      margin-left: auto;
+      padding: 2rem;
+      width: 80%;
+      transform: translateY(-30%);
+      text-align: left;
+      margin-bottom: -5rem;
+    }
+    
+    @media(min-width: 968px){
+      width: 52%;
+      transform: translateY(-80%);
+      margin-bottom: -13rem;
+    }
+
+    &__headline {
+      font-family: $font-accent;
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      font-weight: normal;
+      max-width: 30rem;
+      margin: 1rem auto;
+      line-height: 1.1;
+
+      @media(max-width: 400px){
+        font-size: 2rem;
+      }
+
+      @media(max-width: 310px){
+        font-size: 1.75rem;
+      }
+    }
+
+    &__content {
+      font-size: 1.25rem;
+      line-height: 1.5;
+      letter-spacing: 0.1px;
+      font-family: $font-accent;
+      // max-width: 38rem;
+      margin: 0 auto;
+      max-width: 40rem;
+
+      @media(max-width: 400px){
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+/* lead end */
+
+/* grid start */
+
+.grid {
+  font-family: $font-accent;
+  text-transform: uppercase;
+  width: 100%;
+
+  &__head{
+    display: flex;
+    justify-content: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1.5rem;
+
+    @media(min-width: 768px){
+      justify-content: space-between;
+    }
+
+    &__title {
+      font-size: 2.25rem;
+      font-weight: normal;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        margin-top: 2rem;
+      }
+
+      @media (max-width: 350px) {
+        font-size: 1.75rem;;
+      }
+
+      @media (min-width: 768px) {
+        font-size: 2.5rem;;
+      }
+
+    }
+
+    &__btn {
+      font-family: $font-primary;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      font-weight: normal;
+      letter-spacing: 5px;
+      padding: 0.75rem 2.5rem;
+      background-color: $color-primary-100;
+      border: 1.5px solid $color-primary-900;
+      transition: background 0.2s ease-in-out, color 0.1s ease-in-out;
+      box-shadow:
+        1px 5px 5px $color-primary-900-transparent
+      ;
+
+
+      &:hover,
+      &:focus,
+      &:active {
+        background: $color-primary-900;
+        color: $color-primary-100;
+      }
+    }
+
+    &__btn-desktop {
+      display: none;
+
+      @media(min-width: 768px){
+        display: block;
+      }
+    }
+
+    &__mobile-button {
+      display: block;
+      display: flex;
+      justify-content: center;
+      margin: 1rem;
+      
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    &__btn-mobile {
+    }
+  }
+}
+
+.grid__grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  padding: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: 350px) {
+    grid-template-columns: 1fr;
+  }
+
+  // @media (min-width: 768px){
+  // grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+  // }
+
+  @media (min-width: 968px){
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+.grid-item {
+  text-align: center;
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+
+  @media (min-width: 968px){
+    height: 450px;
+  }
+  
+  &__headline {
+    color: $color-primary-100;
+    padding: 1.5rem;
+    font-size: 1.75rem;
+    font-weight: normal;
+    max-width: 12rem;
+    text-align: left;
+    line-height: 1.2;
+    transition: color 0.2s ease-in-out;
+}
+
+  }
+}
+
+.gi-one {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/mobile/image-deep-earth.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 968px){
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/desktop/image-deep-earth.jpg);
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 100%), url(../images/desktop/image-deep-earth.jpg);
+
+      & > .grid-item__headline {
+        color: $color-primary-900;
+      }
+    }
+
+  }
+}
+.gi-two {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/mobile/image-night-arcade.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 968px){
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/desktop/image-night-arcade.jpg);
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 100%), url(../images/desktop/image-night-arcade.jpg);
+
+      & > h3 {
+        color: $color-primary-900;
+      }
+    }
+
+  }
+}
+.gi-three {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/mobile/image-soccer-team.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 968px){
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/desktop/image-soccer-team.jpg);
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 100%), url(../images/desktop/image-soccer-team.jpg);
+
+      & > h3 {
+        color: $color-primary-900;
+      }
+    }
+
+  }
+}
+.gi-four {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/mobile/image-grid.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 968px){
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/desktop/image-grid.jpg);
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 100%), url(../images/desktop/image-grid.jpg);
+
+      & > h3 {
+        color: $color-primary-900;
+      }
+    }
+  }
+}
+.gi-five {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/mobile/image-from-above.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 968px){
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/desktop/image-from-above.jpg);
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 100%), url(../images/desktop/image-from-above.jpg);
+
+      & > h3 {
+        color: $color-primary-900;
+      }
+    }
+  }
+}
+.gi-six {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/mobile/image-pocket-borealis.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 968px){
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/desktop/image-pocket-borealis.jpg);
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 100%), url(../images/desktop/image-pocket-borealis.jpg);
+
+      & > h3 {
+        color: $color-primary-900;
+      }
+    }
+  }
+}
+.gi-seven {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/mobile/image-curiosity.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 968px){
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/desktop/image-curiosity.jpg);
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 100%), url(../images/desktop/image-curiosity.jpg);
+
+      & > h3 {
+        color: $color-primary-900;
+      }
+    }
+  }
+}
+.gi-eight {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/mobile/image-fisheye.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 968px){
+    background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0) 50%), url(../images/desktop/image-fisheye.jpg);
+
+    &:hover,
+    &:active,
+    &:focus {
+    background-image: linear-gradient( rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7) 100%), url(../images/desktop/image-fisheye.jpg);
+
+      & > h3 {
+        color: $color-primary-900;
+      }
+    }
+  }
+}
+
+.small-width{
+  max-width: 5rem;
+}
+/* grid end */

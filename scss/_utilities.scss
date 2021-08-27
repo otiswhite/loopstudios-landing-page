@@ -1,0 +1,19 @@
+/* utilities start */
+
+.mobile {
+  display: block;
+
+  @media(min-width: 768px){
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+
+  @media(min-width: 768px){
+    display: block;
+  }
+}
+
+/* utilities end */
